@@ -31,11 +31,10 @@ def modify_position_smart(position, instruction):
 
 
 def find_position(input):
-    first_position = [0, 0]  # Horizontal, depth, aim
+    first_position = [0, 0]  # Horizontal, depth
     second_position = [0, 0, 0]  # Horizontal, depth, aim
     for instruction in input:
         first_position = modify_position_dummy(first_position, instruction)
-        print(second_position)
         second_position = modify_position_smart(second_position, instruction)
 
     return first_position, second_position
